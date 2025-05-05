@@ -1,6 +1,5 @@
 "use client";
-export const dynamic = "force-dynamic"; // Enable dynamic rendering
-
+import dynamic from 'next/dynamic';
 import { personalData } from "@/utils/data/personal-data";
 import AboutSection from "./components/homepage/about";
 import Blog from "./components/homepage/blog";
@@ -11,9 +10,10 @@ import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 
+
 async function getData() {
   const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`);
-
+const GlowCard = dynamic(() => import('./components/helper/glow-card'), { ssr: false });
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
