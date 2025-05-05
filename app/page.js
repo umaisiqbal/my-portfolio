@@ -1,3 +1,4 @@
+"use client";
 export const dynamic = "force-dynamic"; // Enable dynamic rendering
 
 import { personalData } from "@/utils/data/personal-data";
