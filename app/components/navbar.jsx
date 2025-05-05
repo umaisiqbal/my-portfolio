@@ -1,5 +1,5 @@
 // @flow stric
-"use client"
+
 import Link from "next/link";
 
 
