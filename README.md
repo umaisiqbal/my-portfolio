@@ -152,7 +152,7 @@ Eg:
 ```javascript
 export const personalData = {
   name: "Umais Iqbal",
-   profile: '/me.jpg',
+
   designation: "Reactjs/Nextjs Developer",
   description: "My name is Umais iqbal....",
   email: "malikumais555@gmail.com",
